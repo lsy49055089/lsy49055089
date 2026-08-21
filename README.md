@@ -2,6 +2,8 @@
 
 학교 프로젝트와 온디바이스 과정에서 수행한 Embedded, RTL/FPGA Design, Verification, Computer Vision 프로젝트를 정리한 포트폴리오입니다.
 
+> 관심 분야: Embedded Systems · RTL/FPGA Design · Verification · On-Device AI
+
 ## Portfolio
 
 | 분야 | 저장소 | 주요 내용 |
