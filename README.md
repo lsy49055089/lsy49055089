@@ -12,7 +12,7 @@
 | 🤖 On-Device AI | [ondevice-ai](https://github.com/lsy49055089/ondevice-ai) | Jetson TensorRT 가위바위보, 다중 카메라 CCTV Re-ID |
 | ⚙️ On-Device Embedded | [ondevice-embedded](https://github.com/lsy49055089/ondevice-embedded) | STM32 Cortex-M4 LED 미니게임 |
 | 🧩 On-Device Design | [ondevice-design](https://github.com/lsy49055089/ondevice-design) | [RV32I CPU](https://github.com/lsy49055089/ondevice-design/tree/main/fpga-rv32i-single-cycle) · [UART/FIFO Sensor](https://github.com/lsy49055089/ondevice-design/tree/main/fpga-uart-fifo-sensor-system) · [Stopwatch/Watch](https://github.com/lsy49055089/ondevice-design/tree/main/fpga-stopwatch-watch) |
-| ✅ On-Device Verification | [ondevice-verification](https://github.com/lsy49055089/ondevice-verification) | [UART + FIFO + Parity SV 검증](https://github.com/lsy49055089/ondevice-verification/tree/main/systemverilog-uart-fifo-verification) · Class-based TB · Parity 오류 주입·차단 |
+| ✅ On-Device Verification | [ondevice-verification](https://github.com/lsy49055089/ondevice-verification) | [SPI & I2C UVM 검증](https://github.com/lsy49055089/ondevice-verification/tree/main/uvm-spi-i2c-verification) · [UART + FIFO + Parity SV 검증](https://github.com/lsy49055089/ondevice-verification/tree/main/systemverilog-uart-fifo-verification) |
 
 ### Featured Team Project
 
@@ -20,6 +20,7 @@
 
 ## Tech Stack
 
-- **HDL / Verification:** Verilog, SystemVerilog, VHDL, Class-based Testbench, Mailbox, Scoreboard
+- **HDL / Verification:** Verilog, SystemVerilog, VHDL, UVM 1.2, Class-based Testbench, TLM, Functional Coverage, Scoreboard
 - **Embedded / FPGA:** C, ARM Cortex-M4, STM32, RISC-V RV32I, Basys3, MicroBlaze
 - **On-Device AI:** Jetson Orin Nano, TensorRT, YOLO, ByteTrack, OSNet Re-ID
+
