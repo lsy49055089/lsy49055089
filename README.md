@@ -20,6 +20,6 @@
 
 ## Tech Stack
 
-- **HDL / Verification:** Verilog, SystemVerilog, VHDL, Class-based Testbench
+- **HDL / Verification:** Verilog, SystemVerilog, VHDL, Class-based Testbench, Mailbox, Scoreboard
 - **Embedded / FPGA:** C, ARM Cortex-M4, STM32, RISC-V RV32I, Basys3, MicroBlaze
 - **On-Device AI:** Jetson Orin Nano, TensorRT, YOLO, ByteTrack, OSNet Re-ID
