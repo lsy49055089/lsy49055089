@@ -1,6 +1,6 @@
-# 이승열 | Embedded · RTL Design · Verification
+# 이승열 | Embedded · RTL Design · Verification · On-Device AI
 
-학교 프로젝트와 온디바이스 과정의 RTL 설계·검증, Jetson 기반 AI 팀 프로젝트를 정리한 포트폴리오입니다.
+학교 프로젝트와 온디바이스 과정의 RTL 설계·검증, Computer Vision 기반 AI 프로젝트를 정리한 포트폴리오입니다.
 
 ## Portfolio
 
@@ -21,11 +21,12 @@
 - [ondevice-verification](https://github.com/lsy49055089/ondevice-verification)  
   SystemVerilog·UVM 기반 검증 학습과 프로젝트를 정리합니다.
 
-### 🤝 Team Project
+### 🤖 AI Projects
 
-- [Multi-Camera Person Tracking System](https://github.com/realisshoon/jetson-multicam-re_id-tracking)  
-  Jetson Orin Nano, YOLO, ByteTrack, OSNet Re-ID를 활용한 다중 카메라 CCTV 팀 프로젝트입니다.  
-  **Team repository · 팀 공동 작업**
+- [ai-projects](https://github.com/lsy49055089/ai-projects)  
+  Computer Vision과 On-Device AI 프로젝트를 정리합니다.
+  - [Multi-Camera Person Tracking & Re-ID CCTV](https://github.com/lsy49055089/ai-projects/tree/main/multicam-cctv-reid) — **Team Project**
+  - [Original Team Repository](https://github.com/realisshoon/jetson-multicam-re_id-tracking)
 
 ## Tech Stack
 
