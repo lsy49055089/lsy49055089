@@ -1,26 +1,23 @@
 # 이승열 | Embedded · RTL Design · Verification · On-Device AI
 
-학교 프로젝트와 온디바이스 과정의 Embedded, RTL 설계, Verification, Computer Vision 프로젝트를 정리한 포트폴리오입니다.
+학교 프로젝트와 온디바이스 과정에서 수행한 Embedded, RTL/FPGA Design, Verification, Computer Vision 프로젝트를 정리한 포트폴리오입니다.
 
 ## Portfolio
 
-### 🎓 School Projects
+| 분야 | 저장소 | 주요 내용 |
+|---|---|---|
+| 🎓 School | [school-projects](https://github.com/lsy49055089/school-projects) | 학교 과정 프로젝트 |
+| 🤖 On-Device AI | [ondevice-ai](https://github.com/lsy49055089/ondevice-ai) | Jetson TensorRT 가위바위보, 다중 카메라 CCTV Re-ID |
+| ⚙️ On-Device Embedded | [ondevice-embedded](https://github.com/lsy49055089/ondevice-embedded) | STM32 Cortex-M4 LED 미니게임 |
+| 🧩 On-Device Design | [ondevice-design](https://github.com/lsy49055089/ondevice-design) | Verilog·VHDL, FPGA, MicroBlaze, AXI-Lite, RV32I |
+| ✅ On-Device Verification | [ondevice-verification](https://github.com/lsy49055089/ondevice-verification) | SystemVerilog, Assertion, Coverage, UVM |
 
-- [school-projects](https://github.com/lsy49055089/school-projects)  
-  학교 과정에서 수행한 프로젝트를 정리하는 공간입니다.
+### Featured Team Project
 
-### ⚙️ On-Device Projects
-
-- [ondevice-projects](https://github.com/lsy49055089/ondevice-projects)  
-  온디바이스 과정의 프로젝트를 분야별로 통합해 정리합니다.
-  - [Embedded — STM32 Cortex-M4 LED Mini Games](https://github.com/lsy49055089/ondevice-projects/tree/main/embedded/cortex-m4-led-games)
-  - [RTL / FPGA Design](https://github.com/lsy49055089/ondevice-projects/tree/main/design)
-  - [SystemVerilog / UVM Verification](https://github.com/lsy49055089/ondevice-projects/tree/main/verification)
-  - [AI — Multi-Camera Person Tracking & Re-ID CCTV](https://github.com/lsy49055089/ondevice-projects/tree/main/AI/multicam-cctv-reid) — **Team Project**
-  - [Original CCTV Team Repository](https://github.com/realisshoon/jetson-multicam-re_id-tracking)
+- [Multi-Camera Person Tracking & Re-ID CCTV](https://github.com/realisshoon/jetson-multicam-re_id-tracking)
 
 ## Tech Stack
 
 - **HDL / Verification:** Verilog, SystemVerilog, VHDL, UVM
 - **Embedded / FPGA:** C, ARM Cortex-M4, STM32, Basys3, MicroBlaze
-- **On-Device AI:** Jetson Orin Nano, YOLO, ByteTrack, OSNet Re-ID
+- **On-Device AI:** Jetson Orin Nano, TensorRT, YOLO, ByteTrack, OSNet Re-ID
