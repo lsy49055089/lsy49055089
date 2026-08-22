@@ -8,22 +8,22 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 
 ### 📄 Parallel Decision Tree Hardware
 
-한 입력 벡터의 현재 노드와 두 자식 노드를 병렬 계산한 2025 한국스마트미디어학회 추계학술대회 논문 프로젝트입니다. 최종 논문이 명시한 4-state FSM과 복구 기록의 6-state 개발 구현을 분리하고, 동일한 37개 벡터로 결과 동등성과 완료 사이클을 검증했습니다.
+한 입력 벡터에서 현재 노드와 두 자식 노드를 병렬 계산해 트리 탐색 시간을 단축한 2025 한국스마트미디어학회 추계학술대회 논문 프로젝트입니다. 논문에서 제안한 4-state FSM을 RTL로 구현하고, 6-state 비교 구현과 동일한 37개 분류 결과를 유지하면서 배치 완료 사이클을 293에서 255로 줄였습니다.
 
 | Evidence | Result |
 |---|---:|
-| Recovered 6-state regression | **37 / 37 PASS** |
-| Paper-aligned 4-state equivalence | **37 / 37 equivalent** |
-| Recovered batch cycles | **293 → 255 (13.0%↓)** |
+| 6-state baseline | **37 / 37 PASS** |
+| 4-state implementation | **37 / 37 equivalent** |
+| Batch completion cycles | **293 → 255 (13.0%↓)** |
 | Paper-reported traversal | **평균 1.37× · 최대 1.50× speedup** |
 
-[View Conference Paper Project](https://github.com/lsy49055089/Graduation-Thesis) · [Recovered 6-state](https://github.com/lsy49055089/Graduation-Thesis/tree/main/parallel-decision-tree/rtl/recovered_6state) · [Paper-aligned 4-state](https://github.com/lsy49055089/Graduation-Thesis/tree/main/parallel-decision-tree/rtl/refined_4state)
+[View Conference Paper Project](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) · [6-state RTL](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware/tree/main/parallel-decision-tree/rtl/recovered_6state) · [4-state RTL](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware/tree/main/parallel-decision-tree/rtl/refined_4state)
 
 ## Project Collections
 
 | Area | Repository | Highlights |
 |---|---|---|
-| 📄 Conference Paper | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Graduation-Thesis) | Parallel UN1–UN3 · 4-state paper FSM · 37-vector equivalence |
+| 📄 Conference Paper | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | Parallel UN1–UN3 · 4-state FSM · 37-vector equivalence |
 | 🧩 RTL Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/RTL-Design-Projects) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
 | ✅ Verification | [RTL Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
 | ⚙️ Embedded | [Embedded Systems Projects](https://github.com/lsy49055089/Embedded-Systems-Projects) | STM32 Cortex-M4 LED Mini Games |
@@ -31,7 +31,7 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 
 ## Selected Results
 
-- **Parallel Decision Tree:** 37/37 equivalent, recovered batch cycles 293 → 255, paper average speedup 1.37×
+- **Parallel Decision Tree:** 37/37 equivalent, batch cycles 293 → 255, paper average speedup 1.37×
 - **SPI / I2C UVM:** SPI 38 PASS / 0 FAIL, I2C 7 PASS / 0 FAIL
 - **RV32I CPU:** 37개 명령어 RTL 구현
 - **AXI4-Lite Verification:** I2C LCD Scoreboard 30 PASS, Functional Coverage 80.50%
