@@ -6,30 +6,32 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 
 ## Featured Project
 
-### 🎓 Parallel Decision Tree Hardware
+### 📄 Parallel Decision Tree Hardware
 
-FPGA에서 현재 노드와 두 자식 노드를 병렬 계산하는 졸업논문 프로젝트입니다. 유실된 학술대회 6-state RTL을 근거 기반으로 복구하고, 불필요한 제어 상태를 합친 refined 4-state RTL과 기능·사이클을 비교했습니다.
+한 입력 벡터의 현재 노드와 두 자식 노드를 병렬 계산한 2025 한국스마트미디어학회 추계학술대회 논문 프로젝트입니다. 최종 논문이 명시한 4-state FSM과 복구 기록의 6-state 개발 구현을 분리하고, 동일한 37개 벡터로 결과 동등성과 완료 사이클을 검증했습니다.
 
-| Version | Verification | Batch Cycles |
-|---|---:|---:|
-| Recovered 6-state | **37 / 37 PASS** | 293 |
-| Refined 4-state | **37 / 37 equivalent** | 255 |
+| Evidence | Result |
+|---|---:|
+| Recovered 6-state regression | **37 / 37 PASS** |
+| Paper-aligned 4-state equivalence | **37 / 37 equivalent** |
+| Recovered batch cycles | **293 → 255 (13.0%↓)** |
+| Paper-reported traversal | **평균 1.37× · 최대 1.50× speedup** |
 
-[View Graduation Thesis](https://github.com/lsy49055089/school-projects) · [Recovered 6-state](https://github.com/lsy49055089/school-projects/tree/main/parallel-decision-tree/rtl/recovered_6state) · [Refined 4-state](https://github.com/lsy49055089/school-projects/tree/main/parallel-decision-tree/rtl/refined_4state)
+[View Conference Paper Project](https://github.com/lsy49055089/Graduation-Thesis) · [Recovered 6-state](https://github.com/lsy49055089/Graduation-Thesis/tree/main/parallel-decision-tree/rtl/recovered_6state) · [Paper-aligned 4-state](https://github.com/lsy49055089/Graduation-Thesis/tree/main/parallel-decision-tree/rtl/refined_4state)
 
 ## Project Collections
 
 | Area | Repository | Highlights |
 |---|---|---|
-| 🎓 Graduation Thesis | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/school-projects) | 6-state recovery · refined 4-state · 37-vector equivalence |
-| 🧩 RTL Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/ondevice-design) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
-| ✅ Verification | [RTL Verification Projects](https://github.com/lsy49055089/ondevice-verification) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
-| ⚙️ Embedded | [Embedded Systems Projects](https://github.com/lsy49055089/ondevice-embedded) | STM32 Cortex-M4 LED Mini Games |
-| 🤖 AI / CV | [AI / Computer Vision Projects](https://github.com/lsy49055089/ondevice-ai) | Jetson RPS · Multi-Camera Re-ID |
+| 📄 Conference Paper | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Graduation-Thesis) | Parallel UN1–UN3 · 4-state paper FSM · 37-vector equivalence |
+| 🧩 RTL Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/RTL-Design-Projects) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
+| ✅ Verification | [RTL Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
+| ⚙️ Embedded | [Embedded Systems Projects](https://github.com/lsy49055089/Embedded-Systems-Projects) | STM32 Cortex-M4 LED Mini Games |
+| 🤖 AI / CV | [AI / Computer Vision Projects](https://github.com/lsy49055089/AI-Projects) | Jetson RPS · Multi-Camera Re-ID |
 
 ## Selected Results
 
-- **Parallel Decision Tree:** recovered/refined RTL 37/37 equivalent, batch cycles 293 → 255
+- **Parallel Decision Tree:** 37/37 equivalent, recovered batch cycles 293 → 255, paper average speedup 1.37×
 - **SPI / I2C UVM:** SPI 38 PASS / 0 FAIL, I2C 7 PASS / 0 FAIL
 - **RV32I CPU:** 37개 명령어 RTL 구현
 - **AXI4-Lite Verification:** I2C LCD Scoreboard 30 PASS, Functional Coverage 80.50%
