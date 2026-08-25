@@ -27,9 +27,9 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 |---|---|---|
 | 📄 Conference Paper | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | Parallel UN1–UN3 · 4-state FSM · 37-vector equivalence |
 | 🧩 RTL / FPGA Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/RTL-Design-Projects) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
-| ✅ Design Verification | [RTL Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
+| ✅ Design Verification | [Design Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
 | ⚙️ Embedded Systems | [Embedded Systems Projects](https://github.com/lsy49055089/Embedded-Systems-Projects) | STM32 Cortex-M4 LED Mini Games |
-| 🤖 Edge AI / CV | [AI / Computer Vision Projects](https://github.com/lsy49055089/AI-Projects) | Jetson RPS · Multi-Camera Re-ID |
+| 🤖 Edge AI / CV | [Edge AI / CV Projects](https://github.com/lsy49055089/AI-Projects) | Jetson RPS · Multi-Camera Re-ID |
 
 ## Selected Results
 
