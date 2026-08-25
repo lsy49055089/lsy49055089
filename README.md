@@ -43,6 +43,6 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 
 ## Tech Stack
 
-- **HDL / Verification:** Verilog, SystemVerilog, VHDL, UVM 1.2, Class-based Testbench, TLM, Functional Coverage, Scoreboard
+- **HDL / Verification:** Verilog, SystemVerilog, UVM 1.2, Class-based Testbench, TLM, Functional Coverage, Scoreboard
 - **Embedded / FPGA:** C, ARM Cortex-M4, STM32, RISC-V RV32I, Basys3, MicroBlaze
 - **AI / Computer Vision:** Jetson Orin Nano, TensorRT, OpenCV, YOLO, ByteTrack, OSNet Re-ID
