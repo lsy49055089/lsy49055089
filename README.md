@@ -1,8 +1,10 @@
-# 이승열 | RTL Design · Verification · Embedded · AI
+# 이승열 | RTL / FPGA Design · Design Verification · Embedded Systems · Edge AI / CV
 
 RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI까지 수행한 프로젝트 포트폴리오입니다.
 
-> **Focus:** RTL/FPGA Design · Design Verification · Embedded Systems · Computer Vision
+> **Focus:** RTL / FPGA Design · Design Verification · Embedded Systems · Edge AI / CV
+>
+> **Contact:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
 
 ## Featured Project
 
@@ -24,10 +26,10 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 | Area | Repository | Highlights |
 |---|---|---|
 | 📄 Conference Paper | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | Parallel UN1–UN3 · 4-state FSM · 37-vector equivalence |
-| 🧩 RTL Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/RTL-Design-Projects) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
-| ✅ Verification | [RTL Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
-| ⚙️ Embedded | [Embedded Systems Projects](https://github.com/lsy49055089/Embedded-Systems-Projects) | STM32 Cortex-M4 LED Mini Games |
-| 🤖 AI / CV | [AI / Computer Vision Projects](https://github.com/lsy49055089/AI-Projects) | Jetson RPS · Multi-Camera Re-ID |
+| 🧩 RTL / FPGA Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/RTL-Design-Projects) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
+| ✅ Design Verification | [RTL Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
+| ⚙️ Embedded Systems | [Embedded Systems Projects](https://github.com/lsy49055089/Embedded-Systems-Projects) | STM32 Cortex-M4 LED Mini Games |
+| 🤖 Edge AI / CV | [AI / Computer Vision Projects](https://github.com/lsy49055089/AI-Projects) | Jetson RPS · Multi-Camera Re-ID |
 
 ## Selected Results
 
@@ -45,4 +47,4 @@ RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI�
 
 - **HDL / Verification:** Verilog, SystemVerilog, UVM 1.2, Class-based Testbench, TLM, Functional Coverage, Scoreboard
 - **Embedded / FPGA:** C, ARM Cortex-M4, STM32, RISC-V RV32I, Basys3, MicroBlaze
-- **AI / Computer Vision:** Jetson Orin Nano, TensorRT, OpenCV, YOLO, ByteTrack, OSNet Re-ID
+- **Edge AI / CV:** Jetson Orin Nano, TensorRT, OpenCV, YOLO, ByteTrack, OSNet Re-ID
