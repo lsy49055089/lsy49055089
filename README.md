@@ -1,50 +1,37 @@
-# 이승열 | RTL / FPGA Design · Design Verification · Embedded Systems · Edge AI / CV
+# 이승열 | RTL Design & Verification
 
-RTL 설계부터 SystemVerilog/UVM 검증, FPGA·임베디드 구현과 Edge AI까지 수행한 프로젝트 포트폴리오입니다.
+RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스템 통합 경험을 쌓아왔습니다.
 
-> **Focus:** RTL / FPGA Design · Design Verification · Embedded Systems · Edge AI / CV
->
-> **Contact:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
+**Portfolio:** [Notion Portfolio](https://app.notion.com/p/Portfolio-3a67713c604080c293b1f527c55f7800)  
+**Contact:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
 
-## Featured Project
+## 01 · RTL / FPGA Design
 
-### 📄 Parallel Decision Tree Hardware
+| Project | Focus |
+|---|---|
+| [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | Parallel Datapath · 6→4-state FSM · 37-vector equivalence |
+| [FPGA VGA Conductor Game](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game) | XY Detection · FPGA-PC Integration · MAESTRO UI |
+| [RV32I Single-Cycle CPU](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-rv32i-single-cycle) | 37 RV32I Instructions · Datapath / Control |
+| [UART · FIFO · Sensor System](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-uart-fifo-sensor-system) | DHT11 · HC-SR04 · UART/FIFO Integration |
+| [FPGA Stopwatch & Watch](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-stopwatch-watch) | FSM / Datapath · Moment Capture |
 
-한 입력 벡터에서 현재 노드와 두 자식 노드를 병렬 계산해 트리 탐색 시간을 단축한 2025 한국스마트미디어학회 추계학술대회 논문 프로젝트입니다. 논문에서 제안한 4-state FSM을 RTL로 구현하고, 6-state 비교 구현과 동일한 37개 분류 결과를 유지하면서 배치 완료 사이클을 293에서 255로 줄였습니다.
+## 02 · Design Verification
 
-| Evidence | Result |
-|---|---:|
-| 6-state baseline | **37 / 37 PASS** |
-| 4-state implementation | **37 / 37 equivalent** |
-| Batch completion cycles | **293 → 255 (13.0%↓)** |
-| Paper-reported traversal | **평균 1.37× · 최대 1.50× speedup** |
+| Project | Focus |
+|---|---|
+| [MicroBlaze AXI4-Lite Peripheral System](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system) | 5 Custom IP · SPI 32/32 · I2C 30/30 · UVM |
+| [SPI & I2C UVM Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/uvm-spi-i2c-verification) | Scoreboard · Random Test · Functional Coverage |
+| [UART + FIFO + Parity Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/systemverilog-uart-fifo-verification) | Class-based TB · Queue Reference Model · Error Injection |
 
-[View Conference Paper Project](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) · [6-state RTL](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware/tree/main/parallel-decision-tree/rtl/recovered_6state) · [4-state RTL](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware/tree/main/parallel-decision-tree/rtl/refined_4state)
+## 03 · Edge AI / CV
 
-## Project Collections
-
-| Area | Repository | Highlights |
-|---|---|---|
-| 📄 Conference Paper | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | Parallel UN1–UN3 · 4-state FSM · 37-vector equivalence |
-| 🧩 RTL / FPGA Design | [RTL / FPGA Design Projects](https://github.com/lsy49055089/RTL-Design-Projects) | RV32I CPU · UART/FIFO Sensor · Stopwatch/Watch |
-| ✅ Design Verification | [Design Verification Projects](https://github.com/lsy49055089/RTL-Verification-Projects) | SPI/I2C UVM · UART/FIFO/Parity SystemVerilog TB |
-| ⚙️ Embedded Systems | [Embedded Systems Projects](https://github.com/lsy49055089/Embedded-Systems-Projects) | STM32 Cortex-M4 LED Mini Games |
-| 🤖 Edge AI / CV | [Edge AI / CV Projects](https://github.com/lsy49055089/AI-Projects) | Jetson RPS · Multi-Camera Re-ID |
-
-## Selected Results
-
-- **Parallel Decision Tree:** 37/37 equivalent, batch cycles 293 → 255, paper average speedup 1.37×
-- **SPI / I2C UVM:** SPI 38 PASS / 0 FAIL, I2C 7 PASS / 0 FAIL
-- **RV32I CPU:** 37개 명령어 RTL 구현
-- **AXI4-Lite Verification:** I2C LCD Scoreboard 30 PASS, Functional Coverage 80.50%
-
-## Featured Team Project
-
-- [Multi-Camera Person Tracking & Re-ID CCTV](https://github.com/realisshoon/jetson-multicam-re_id-tracking)
-  - Jetson 4-node · YOLO · ByteTrack · OSNet · MQTT
+| Project | Focus |
+|---|---|
+| [Multi-Camera Re-ID Tracking](https://github.com/lsy49055089/AI-Projects/tree/main/AI/multicam-cctv-reid) | Jetson 4-Node · Re-ID · MQTT |
+| [Jetson AI Rock-Paper-Scissors](https://github.com/lsy49055089/AI-Projects/tree/main/AI/jetson-rps-game) | MobileNetV2 · TensorRT · Hand ROI |
 
 ## Tech Stack
 
-- **HDL / Verification:** Verilog, SystemVerilog, UVM 1.2, Class-based Testbench, TLM, Functional Coverage, Scoreboard
-- **Embedded / FPGA:** C, ARM Cortex-M4, STM32, RISC-V RV32I, Basys3, MicroBlaze
-- **Edge AI / CV:** Jetson Orin Nano, TensorRT, OpenCV, YOLO, ByteTrack, OSNet Re-ID
+- **HDL / Verification:** Verilog, SystemVerilog, UVM, Scoreboard, Functional Coverage
+- **FPGA / SoC:** Vivado, Basys3, MicroBlaze, AXI4-Lite, UART, SPI, I2C
+- **Software / Edge AI:** C, Python, Jetson Orin Nano, TensorRT, OpenCV
