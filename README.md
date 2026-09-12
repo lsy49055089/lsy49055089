@@ -2,7 +2,6 @@
 
 RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스템 통합 경험을 쌓아왔습니다.
 
-**Portfolio:** [Notion Portfolio](https://app.notion.com/p/Portfolio-3a67713c604080c293b1f527c55f7800)  
 **Contact:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
 
 ## 01 · RTL / FPGA Design
