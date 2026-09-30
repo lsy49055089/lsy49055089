@@ -10,7 +10,8 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 
 | Project | Focus |
 |---|---|
-| [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | Parallel Datapath · 6→4-state FSM · 37-vector equivalence |
+| [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | 논문 기준 평균 1.37배 성능 향상 · 병렬 Datapath · FSM 설계 |
+| [MicroBlaze AXI4-Lite Peripheral System](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system) | AXI4-Lite IP 5종 · MicroBlaze/C 제어 · FPGA 보드 통합 |
 | [FPGA VGA Conductor Game](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game) | XY Detection · FPGA-PC Integration · MAESTRO UI |
 | [RV32I Single-Cycle CPU](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-rv32i-single-cycle) | 37 RV32I Instructions · Datapath / Control |
 | [UART · FIFO · Sensor System](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-uart-fifo-sensor-system) | DHT11 · HC-SR04 · UART/FIFO Integration |
@@ -20,7 +21,6 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 
 | Project | Focus |
 |---|---|
-| [MicroBlaze AXI4-Lite Peripheral System](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system) | 5 Custom IP · SPI 32/32 · I2C 30/30 · UVM |
 | [SPI & I2C UVM Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/uvm-spi-i2c-verification) | Scoreboard · Random Test · Functional Coverage |
 | [UART + FIFO + Parity Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/systemverilog-uart-fifo-verification) | Class-based TB · Queue Reference Model · Error Injection |
 
