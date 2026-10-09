@@ -22,12 +22,13 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 | [SPI & I2C UVM Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/uvm-spi-i2c-verification) | Scoreboard · Random Test · Functional Coverage |
 | [UART + FIFO + Parity Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/systemverilog-uart-fifo-verification) | Class-based TB · Queue Reference Model · Error Injection |
 
-## 03 · Edge AI / CV
+## 03 · AI / CV
 
 | Project | Focus |
 |---|---|
 | [Multi-Camera Re-ID Tracking](https://github.com/lsy49055089/AI-Projects/tree/main/AI/multicam-cctv-reid) | Jetson 4-Node · Re-ID · MQTT |
 | [Jetson AI Rock–Paper–Scissors](https://github.com/lsy49055089/AI-Projects/tree/main/AI/jetson-rps-game) | MobileNetV2 · TensorRT · Hand ROI |
+| [DQN 기반 물류창고 배치 시뮬레이션](https://github.com/lsy49055089/AI-Projects/tree/main/AI/warehouse-dqn) | NumPy DQN · 단계별 보상 · 2층 창고 배치 |
 
 ## 04 · Embedded
 
@@ -39,4 +40,4 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 
 - **HDL / Verification:** Verilog, SystemVerilog, UVM, Scoreboard, Functional Coverage
 - **FPGA / SoC:** Vivado, Basys3, MicroBlaze, AXI4-Lite, UART, SPI, I2C
-- **Software / Edge AI:** C, Python, Jetson Orin Nano, TensorRT, OpenCV
+- **Software / AI:** C, Python, NumPy, Jetson Orin Nano, TensorRT, OpenCV
