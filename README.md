@@ -4,8 +4,6 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 
 **Contact:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
 
-**Portfolio:** [이승열 | Notion Portfolio](https://app.notion.com/p/3f27713c604080ccab03e25a888e57bb)
-
 ## 01 · RTL / FPGA Design
 
 | Project | Focus |
