@@ -35,9 +35,11 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 | Project | Focus |
 |---|---|
 | [STM32 Cortex-M4 LED Games](https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/cortex-m4-led-games) | TIM2 반응시간 측정 · LCD 기억력 수열 · GPIO/I2C/UART |
+| [BLE·GPS 스마트 캐리어](https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/smart-carrier-ble-gps) | GPS·BLE 통신 연동 · Flutter 앱 · 팀 기능 통합 |
 
 ## Tech Stack
 
 - **HDL / Verification:** Verilog, SystemVerilog, UVM, Scoreboard, Functional Coverage
 - **FPGA / SoC:** Vivado, Basys3, MicroBlaze, AXI4-Lite, UART, SPI, I2C
 - **Software / AI:** C, Python, NumPy, Jetson Orin Nano, TensorRT, OpenCV
+- **Embedded / Mobile:** STM32, ESP32, BLE, Flutter/Dart, Firebase/FCM
