@@ -9,6 +9,7 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 | Project | Focus |
 |---|---|
 | [Parallel Decision Tree Hardware](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | 논문 기준 평균 1.37배 성능 향상 · 병렬 Datapath · FSM 설계 |
+| [CNN 모션인식 SoC 플랫폼](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/zynq-cnn-motion-robot-soc) | 최우수상 · Zynq PS–PL · 5축 PWM IP · C Record/Replay |
 | [MicroBlaze AXI4-Lite Peripheral System](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system) | AXI4-Lite IP 5종 · MicroBlaze/C 제어 · FPGA 보드 통합 |
 | [FPGA VGA Conductor Game](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game) | XY Detection · FPGA-PC Integration · MAESTRO UI |
 | [RV32I Single-Cycle CPU](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-rv32i-single-cycle) | 37 RV32I Instructions · Datapath / Control |
@@ -40,6 +41,6 @@ RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스
 ## Tech Stack
 
 - **HDL / Verification:** Verilog, SystemVerilog, UVM, Scoreboard, Functional Coverage
-- **FPGA / SoC:** Vivado, Basys3, MicroBlaze, AXI4-Lite, UART, SPI, I2C
-- **Software / AI:** C, Python, NumPy, Jetson Orin Nano, TensorRT, OpenCV
+- **FPGA / SoC:** Vivado/Vitis, Basys3, Zybo Z7-20, Zynq, MicroBlaze, AXI4-Lite, UART, SPI, I2C
+- **Software / AI:** C, C#/Unity, Python, NumPy, Jetson Orin Nano, TensorRT, OpenCV
 - **Embedded / Mobile:** STM32, ESP32, BLE, Flutter/Dart, Firebase/FCM
