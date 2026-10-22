@@ -1,0 +1,492 @@
+[
+  {
+    "id": "decision-tree",
+    "title": "병렬 결정트리 RTL",
+    "kind": "design",
+    "kicker": "RESEARCH · FIRST AUTHOR",
+    "period": "2025.07 — 2025.11",
+    "team": "학부 연구",
+    "summary": "현재 노드와 좌우 자식 노드를 함께 계산해, 한 입력 벡터의 트리 탐색 시간을 줄인 하드웨어입니다.",
+    "role": "3-UN Datapath·FSM 설계, 결과 동등성 검증, 제1저자 논문 작성·발표",
+    "stack": [
+      "Verilog",
+      "FSM / Datapath",
+      "Vivado",
+      "Icarus Verilog"
+    ],
+    "repo": "https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware",
+    "result": "논문 실험 평균 1.37× · RTL 회귀 37/37",
+    "sections": [
+      [
+        "설계 판단",
+        "부모의 분기 결과가 나오기 전, 좌우 자식 후보를 미리 계산했습니다. UN1은 현재 노드, UN2·UN3은 자식 노드를 담당하고 Logic이 분기 결과에 맞는 계산값을 선택합니다. 선택된 다음 노드를 주소 메모리에 피드백해 탐색을 이어갑니다."
+      ],
+      [
+        "제어 흐름 개선",
+        "동일한 데이터패스에서 6-state 제어를 4-state로 통합했습니다. 다음 입력과 대기 제어를 기존 상태에 묶어 불필요한 상태 전환을 줄였습니다."
+      ],
+      [
+        "검증 결과",
+        "Icarus Verilog에서 동일한 입력 벡터 37개를 사용했습니다. 6-state와 4-state의 분류 결과가 모두 일치했고, 37개 벡터의 전체 완료 사이클은 293 → 255로 줄었습니다. DONE-state assertion과 기대 클래스 비교를 자동화했습니다."
+      ],
+      [
+        "논문 성능",
+        "2025 학술대회 논문은 Artix-7·Vivado에서 순차 UN1과 병렬 UN3를 비교해 평균 1.37배 성능 향상을 보고했습니다. 위 293 → 255 cycles는 동일 데이터패스의 FSM 회귀 결과로, 서로 다른 비교입니다."
+      ],
+      [
+        "발표",
+        "2025.11.15 한국스마트미디어학회 추계학술대회 · 포스터 P2-14 · 「병렬 구조 기반 결정트리 하드웨어 설계 및 분석」 제1저자 발표."
+      ]
+    ],
+    "image": "decision-tree.webp",
+    "alt": "논문 원본의 공유 메모리·UN1~UN3·Logic·다음 노드 피드백 구성",
+    "featured": true
+  },
+  {
+    "id": "zynq-motion",
+    "title": "CNN 모션인식 SoC 플랫폼",
+    "kind": "design",
+    "kicker": "TEAM PROJECT · 최우수상",
+    "period": "2026.09.09 — 2026.10.15",
+    "team": "7인 팀",
+    "summary": "두 카메라의 관절 인식을 Zynq 5축 로봇팔의 실시간 추종과 동작 기록·재생으로 연결했습니다.",
+    "role": "AXI4-Lite PWM IP, C 출력 제어·Record/Replay, 그리퍼 안정화, Unity 가상환경",
+    "stack": [
+      "Zynq",
+      "AXI4-Lite",
+      "C",
+      "PWM",
+      "DDR / SD"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Design-Projects/tree/main/zynq-cnn-motion-robot-soc",
+    "result": "5축 · 20 ms 제어 · 최우수상",
+    "sections": [
+      [
+        "PS–PL 출력 설계",
+        "PS의 C 코드는 목표 관절각·출력 모드·파일을 관리하고 PL의 PWM Core는 100 MHz에서 20 ms 주기 파형을 생성합니다. 5축 설정을 Shadow 레지스터에 기록한 뒤 UPDATE로 함께 적용합니다."
+      ],
+      [
+        "동작 기록·재생",
+        "보정·속도·가속도 제한을 거쳐 HAL 적용에 성공한 관절 명령을 20 ms마다 DDR에 기록하고 종료 후 SD에 보관합니다. 재생 전 데이터 검사와 첫 자세 ALIGN을 수행하며, 틱 누락·저장 실패 시 기록과 기존 파일을 보호합니다."
+      ],
+      [
+        "개인 구현 · 통합 디버깅",
+        "유효한 한쪽 카메라만으로 그리퍼를 판단하도록 바꿨습니다. 히스테리시스·새 관측 3회 확인·닫힘 후 1.5초 유지로 순간 잡음을 억제했습니다. 150 mm 좌표 도약 검사·재획득과 20 ms 궤적 제한을 연결해 갑작스러운 입력이 출력으로 바로 이어지지 않도록 했습니다."
+      ],
+      [
+        "검증",
+        "PWM RTL TB에서 축소 주기의 펄스 폭·주기·Shadow/UPDATE·Disable을 확인했습니다. PC 모의 C 회귀는 LEFT 16 / RIGHT 16 시나리오, PC 모니터는 131개 테스트를 통과했습니다. 이 결과와 별도로 최종 실물·Unity 통합 동작을 시연했습니다."
+      ],
+      [
+        "팀 역할과 수상",
+        "CNN RTL·UVM, 스테레오 3D 복원·관절각 계산은 다른 팀원 담당입니다. 칼만 필터·카메라별 검출 조건은 로봇팔팀 공동 작업입니다. 2026.10.15 최종 경진대회 최우수상 · 5개 팀 중 2위 · 전체 34명."
+      ]
+    ],
+    "image": "robot-system.webp",
+    "alt": "실제 로봇팔과 Unity 가상환경을 함께 시연한 현장",
+    "featured": true
+  },
+  {
+    "id": "axi-peripheral",
+    "title": "MicroBlaze AXI4-Lite IP",
+    "kind": "design",
+    "kicker": "INDIVIDUAL · HW / SW",
+    "period": "2026.06.22 — 2026.06.30",
+    "team": "개인 프로젝트",
+    "summary": "5종 Custom IP와 C MMIO 드라이버를 설계하고 두 대의 FPGA 보드 통신까지 연결했습니다.",
+    "role": "GPIO·Timer·UART·SPI·I2C LCD IP, Register Map, Vitis C 제어, 보드 통합",
+    "stack": [
+      "Verilog",
+      "MicroBlaze",
+      "AXI4-Lite",
+      "Vitis C"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system",
+    "result": "IP 5종 · SPI 32/32 · I2C 30/30 PASS",
+    "sections": [
+      [
+        "설계",
+        "MicroBlaze와 AXI Interconnect에 GPIO·Timer·UART·SPI·I2C LCD Custom IP를 연결했습니다. 각 IP의 Register Map과 C MMIO 드라이버를 구성하고 두 Basys3 보드의 UART·SPI 송수신을 통합했습니다."
+      ],
+      [
+        "문제 해결",
+        "Sticky DONE의 이전 완료 상태가 다음 요청에 섞이지 않도록 상태 확인·해제·시작 순서를 정리했습니다. SPI 첫 MISO 비트 출력 시점을 조정하고 UART 핀 충돌을 해결했습니다."
+      ],
+      [
+        "검증",
+        "AXI-SPI UVM 32/32, I2C 통신 UVM 30/30 PASS와 실제 보드 통신을 확인했습니다. 이 시험은 별도의 SPI·I2C 단독 UVM 10,000건 확장 회귀와 구분합니다."
+      ],
+      [
+        "구현 범위",
+        "Timer IP는 설계 범위에 포함됩니다. 최종 Vitis 데모의 카운트 동작은 소프트웨어 변수로 처리했습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": true
+  },
+  {
+    "id": "vga-conductor",
+    "title": "FPGA 영상 좌표 처리 · 지휘 게임",
+    "kind": "design",
+    "kicker": "TEAM PROJECT · VIDEO RTL",
+    "period": "2026.08.31 — 2026.09.07",
+    "team": "7인 팀",
+    "summary": "OV7670 영상의 빨강·초록 표식 좌표를 계산하고 지휘 게임과 PC MAESTRO UI에 전달했습니다.",
+    "role": "xy_detection·song_decoder RTL/TB, 군집화·프레임 동기화, FPGA–PC UI 연동",
+    "stack": [
+      "SystemVerilog",
+      "OV7670",
+      "Basys3",
+      "UART",
+      "Python"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game",
+    "result": "320×240 입력 · RED/GREEN X·Y 40-bit",
+    "sections": [
+      [
+        "영상 좌표 처리",
+        "RED/GREEN 검출 픽셀에서 MIN/MAX를 누적해 Bounding Box 중심을 계산했습니다. 이웃 픽셀·Bounding Box·최소 픽셀 조건으로 잡음을 걸러내고 미검출 좌표를 구분했습니다. RED/GREEN 각각의 X·Y, 총 4개 좌표값을 40-bit로 전달합니다."
+      ],
+      [
+        "프레임 지연 해결",
+        "연산식뿐 아니라 프레임 종료, 좌표 레지스터 확정, 후단의 데이터 사용 시점을 분리해 추적했습니다. 좌표 확정 뒤 다음 클록에 Valid를 전달하도록 맞추고 QVGA 320×240와 PC 표시 640×480의 좌표 대응을 정리했습니다."
+      ],
+      [
+        "검증과 연동",
+        "xy_detection TB에서 좌표 출력·미검출·Ready/Valid 조건을, song_decoder TB에서 곡 선택·BPM을 확인했습니다. UART로 전달한 좌표를 PC 검출 영상에 표시하고 MAESTRO UI·MIDI 재생까지 연동했습니다."
+      ],
+      [
+        "팀 내 역할",
+        "개인 담당은 좌표 처리·곡 디코더 RTL/TB와 PC 연동입니다. 게임 로직과 팀 단위 UVM 통합 검증은 팀 공동 개발 범위입니다."
+      ]
+    ],
+    "image": "maestro.webp",
+    "alt": "군집화 적용 후 RED/GREEN 좌표를 표시한 실제 MAESTRO 화면",
+    "featured": true
+  },
+  {
+    "id": "uvm-spi-i2c",
+    "title": "SPI · I2C UVM 검증",
+    "kind": "verification",
+    "kicker": "INDIVIDUAL · SELF-CHECKING TB",
+    "period": "2026.06 · 추가 검증 2026.10",
+    "team": "개인 프로젝트",
+    "summary": "정상·오류 응답을 자동 비교하고, 무작위 트랜잭션과 Functional Coverage로 검증 조건을 확인했습니다.",
+    "role": "UVM 환경·Driver·Monitor·Scoreboard·Coverage, Directed / Random 시나리오",
+    "stack": [
+      "SystemVerilog",
+      "UVM 1.2",
+      "VCS",
+      "Scoreboard"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/uvm-spi-i2c-verification",
+    "result": "SPI·I2C 각각 10,000 transactions · 0 FAIL",
+    "sections": [
+      [
+        "검증 환경",
+        "Transaction·Sequence·Driver·Monitor·Agent·Environment·Test를 구성하고 Analysis Port로 Scoreboard와 Coverage를 연결했습니다. Config DB로 virtual interface를 전달하고 Phase·Objection으로 시뮬레이션 종료를 관리했습니다."
+      ],
+      [
+        "SPI 결과",
+        "SPI Mode 0 · Directed 8 + Random 9,992 = 10,000 트랜잭션. Scoreboard 10,000 PASS / 0 FAIL. 데이터와 응답 타이밍을 기대값과 비교했습니다."
+      ],
+      [
+        "I2C 결과",
+        "정상 주소·잘못된 주소·Read/Write·ACK/NACK 조건을 포함한 4개 동작을 각 2,500회 수행했습니다. 10,000 트랜잭션에서 17,500개 Scoreboard 검사 PASS / 0 FAIL입니다. 트랜잭션 수와 검사 수는 서로 다릅니다."
+      ],
+      [
+        "Functional Coverage",
+        "I2C Functional Coverage 83.33%. 정의한 6개 Coverpoint는 100%, 3개 Cross 항목은 각각 50%입니다. 미충족 Cross가 있어 전체 조건을 모두 시험한 결과로 해석하지 않습니다."
+      ],
+      [
+        "실행 조건",
+        "2026.10.19–20 · Synopsys VCS W-2024.09-SP2 · UVM 1.2 · seed 1234. GitHub CI의 DUT elaboration과 위 UVM 실행 결과는 별도입니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": true
+  },
+  {
+    "id": "uart-verification",
+    "title": "UART · FIFO · Parity 검증",
+    "kind": "verification",
+    "kicker": "INDIVIDUAL · CLASS-BASED TB",
+    "period": "2026.05.12 — 2026.05.18",
+    "team": "개인 프로젝트",
+    "summary": "UART Loopback과 이중 FIFO의 데이터 순서를 비교하고 Parity 오류가 송신 경로로 전달되지 않는지 확인했습니다.",
+    "role": "UART/FIFO RTL, Class-based TB, Reference Queue, 오류 주입·차단 검증",
+    "stack": [
+      "SystemVerilog",
+      "Mailbox",
+      "Virtual Interface",
+      "Assertion"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/systemverilog-uart-fifo-verification",
+    "result": "16-entry FIFO · Odd Parity 오류 주입",
+    "sections": [
+      [
+        "구현",
+        "100 MHz·9,600 bps UART와 16x Oversampling, 8-bit 16-entry FIFO를 설계했습니다. Generator·Driver·Monitor·Scoreboard를 mailbox와 event로 연결한 class-based TB이며 UVM 라이브러리를 사용하지 않았습니다."
+      ],
+      [
+        "검증",
+        "FIFO Reset·Push/Pop·Random 조건을 Reference Queue와 비교했습니다. UART 프레임과 Parity 오류 주입을 확인하고 오류 데이터의 RX FIFO 입력·TX 전달이 차단되는지 검사했습니다."
+      ],
+      [
+        "문제 해결",
+        "중앙 Sampling 기준으로 Start-bit 수신 시점을 맞춰 한 비트 밀림을 수정했습니다. RX FIFO Push 조건에 Parity 오류 차단을 추가해 오류 데이터의 재전송을 막았습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "rv32i",
+    "title": "RV32I Single-Cycle CPU",
+    "kind": "design",
+    "kicker": "INDIVIDUAL · PROCESSOR",
+    "period": "2026.05.19 — 2026.05.27",
+    "team": "개인 프로젝트",
+    "summary": "명령어 Decode부터 ALU·메모리 접근·Write Back까지 32-bit 단일 사이클 CPU를 설계했습니다.",
+    "role": "CPU RTL 전체, Control Unit·Datapath, Testbench와 프로그램 흐름 분석",
+    "stack": [
+      "SystemVerilog",
+      "RISC-V",
+      "Vivado"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-rv32i-single-cycle",
+    "result": "RV32I 명령어 37개 구현",
+    "sections": [
+      [
+        "설계",
+        "PC·Register File·ALU·Immediate·MUX·Instruction/Data Memory를 구성했습니다. Branch·JAL/JALR, Byte/Halfword/Word Load·Store와 Sign/Zero Extension을 구현했습니다."
+      ],
+      [
+        "검증과 분석",
+        "Vivado 파형으로 명령어·Bubble Sort 프로그램 흐름을 확인하고 저장소에서 원본·수정 정렬 이미지의 결과 배열을 자동 비교합니다. 이 결과는 ISA의 모든 조건을 검증했다는 의미는 아닙니다. Single-Cycle Critical Path의 Negative Slack을 확인하고 Multi-Cycle/Pipeline을 개선 방향으로 분석했습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "uart-sensor",
+    "title": "UART/FIFO 센서 통합 시스템",
+    "kind": "design",
+    "kicker": "TEAM PROJECT · SENSOR RTL",
+    "period": "2026.05.01 — 2026.05.06",
+    "team": "3인 팀",
+    "summary": "시계·스톱워치·온습도·거리 센서를 UART 명령과 공용 FND 출력으로 통합했습니다.",
+    "role": "DHT11 Controller·Checksum 검증, 통합 TB, 센서·FND 연동 참여",
+    "stack": [
+      "Verilog",
+      "DHT11",
+      "UART / FIFO",
+      "Basys3"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-uart-fifo-sensor-system",
+    "result": "DHT11 40-bit 수신 · Checksum 검증",
+    "sections": [
+      [
+        "담당 구현",
+        "DHT11 단일 데이터선의 1 µs 타이밍과 40-bit 데이터 수신 FSM, Checksum을 구현했습니다. 센서 단위 TB와 최종 top_4module 통합 TB를 작성하고 공용 FND 통합에 참여했습니다."
+      ],
+      [
+        "검증",
+        "파형과 Basys3에서 온습도 모드·통합 동작을 확인했습니다. 공개 자료의 전체 독립 합성에는 원본 UART/FIFO 하위 RTL과 XDC가 추가로 필요합니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "stopwatch",
+    "title": "FPGA Stopwatch & Watch",
+    "kind": "design",
+    "kicker": "INDIVIDUAL · FSM",
+    "period": "교육 프로젝트",
+    "team": "개인 설계",
+    "summary": "FSM·Datapath를 나누고 Run/Stop·Moment Capture·7-Segment 출력을 연결했습니다.",
+    "role": "Stopwatch FSM·Datapath, Moment 기능, TB·시뮬레이션 검증",
+    "stack": [
+      "Verilog",
+      "FSM",
+      "Basys3"
+    ],
+    "repo": "https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-stopwatch-watch",
+    "result": "100 Hz tick · Moment Capture",
+    "sections": [
+      [
+        "구현",
+        "100 Hz tick 기반 시간 계수, 버튼 디바운싱, Run/Stop·Clear·Moment Capture를 설계하고 4자리 7-Segment 출력으로 연결했습니다."
+      ],
+      [
+        "검증",
+        "테스트벤치와 시뮬레이션에서 모드 전환·계수·캡처 조건을 확인했습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "reid-tracking",
+    "title": "Multi-Camera Re-ID Tracking",
+    "kind": "ai",
+    "kicker": "TEAM PROJECT · EDGE AI",
+    "period": "교육 프로젝트",
+    "team": "팀 프로젝트",
+    "summary": "Jetson 4개 노드의 사람 검출·추적 이벤트를 연결해 카메라 간 동일인과 이동 경로를 판단했습니다.",
+    "role": "OSNet 인터페이스, MQTT·Camera A/B 초기 구현, 환경·Tracking 검증 스크립트",
+    "stack": [
+      "Jetson Orin Nano",
+      "YOLO",
+      "OSNet",
+      "MQTT"
+    ],
+    "repo": "https://github.com/lsy49055089/AI-Projects/tree/main/AI/multicam-cctv-reid",
+    "result": "4개 Jetson · 카메라 간 이벤트 연동",
+    "sections": [
+      [
+        "시스템",
+        "각 Jetson에서 YOLO·ByteTrack으로 사람을 검출·추적하고 OSNet 특징과 시간·방향 조건으로 카메라 간 동일인을 연결했습니다. MQTT로 입장·퇴장 이벤트를 전달했습니다."
+      ],
+      [
+        "개인 담당",
+        "Re-ID 전처리·추론 인터페이스, 모델 Metadata·Manifest 초기 구성, MQTT Client·Camera A/B Prototype과 검증 스크립트를 담당했습니다. 전체 추적 시스템은 팀 공동 성과입니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "jetson-rps",
+    "title": "Jetson AI 가위바위보",
+    "kind": "ai",
+    "kicker": "EDGE AI · COMPUTER VISION",
+    "period": "교육 프로젝트",
+    "team": "AI / CV",
+    "summary": "손 영역 분류와 TensorRT 추론을 연결한 4모드 웹 게임입니다.",
+    "role": "손 영상 분류·추론과 웹 게임 연동 프로젝트",
+    "stack": [
+      "MobileNetV2",
+      "TensorRT",
+      "OpenCV",
+      "Flask"
+    ],
+    "repo": "https://github.com/lsy49055089/AI-Projects/tree/main/AI/jetson-rps-game",
+    "result": "1인전 · 2인전 · 하나 빼기 · 묵찌빠",
+    "sections": [
+      [
+        "구현",
+        "손 영역 영상을 MobileNetV2로 분류하고 TensorRT 추론을 Flask 웹 게임과 연결했습니다. 1인전·2인전·하나 빼기·묵찌빠 네 가지 모드를 구성했습니다."
+      ],
+      [
+        "자료",
+        "개별 구현과 실행 방법은 연결된 GitHub 프로젝트에서 확인할 수 있습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "warehouse-dqn",
+    "title": "DQN 물류창고 배치 시뮬레이션",
+    "kind": "ai",
+    "kicker": "INDIVIDUAL · REINFORCEMENT LEARNING",
+    "period": "2024.12.02 — 2024.12.20",
+    "team": "개인 프로젝트",
+    "summary": "물품 속성과 2층 창고의 적재 상태를 받아 빈 슬롯을 선택하는 강화학습 환경을 구현했습니다.",
+    "role": "주문 데이터 전처리, 환경·보상 함수, NumPy DQN과 배치 시각화",
+    "stack": [
+      "Python",
+      "NumPy",
+      "DQN",
+      "Matplotlib"
+    ],
+    "repo": "https://github.com/lsy49055089/AI-Projects/tree/main/AI/warehouse-dqn",
+    "result": "146개 관측값 · 33개 행동 후보",
+    "sections": [
+      [
+        "설계",
+        "2층 10×7 격자와 무게별 층 선택을 구성하고 점유 슬롯을 행동 마스크로 제외했습니다. NumPy 기반 146 → 64 → 64 → 33 네트워크에 경험 재생·타깃 네트워크를 적용했습니다."
+      ],
+      [
+        "확인 범위",
+        "단계별 보상과 100·200·300회 학습 시점의 배치를 시각화했습니다. 샘플 데이터의 정책 비교와 300회 학습 화면은 별도 실행이며, 자동 시험 7개로 환경·전처리·가중치·출력 생성을 점검했습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "stm32-games",
+    "title": "STM32 Cortex-M4 LED Games",
+    "kind": "embedded",
+    "kicker": "EMBEDDED · FIRMWARE",
+    "period": "교육 프로젝트",
+    "team": "임베디드 시스템",
+    "summary": "타이머 반응시간 측정과 LCD 기억력 게임을 하나의 메뉴로 구성했습니다.",
+    "role": "주변장치 제어와 게임 상태 처리",
+    "stack": [
+      "STM32F411RE",
+      "C",
+      "Timer",
+      "I2C / UART"
+    ],
+    "repo": "https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/cortex-m4-led-games",
+    "result": "반응시간 측정 · 기억력 게임",
+    "sections": [
+      [
+        "구현",
+        "STM32 NUCLEO-F411RE의 GPIO·Timer·UART·I2C LCD·Buzzer를 연결했습니다. TIM2 반응시간 측정과 LCD 기억력 수열을 메뉴 시스템으로 구성했습니다."
+      ]
+    ],
+    "image": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "id": "smart-carrier",
+    "title": "BLE·GPS 스마트 캐리어",
+    "kind": "embedded",
+    "kicker": "CAPSTONE · SYSTEM INTEGRATION",
+    "period": "2025.03 — 2025.06",
+    "team": "3인 팀",
+    "summary": "ESP32의 GPS 좌표를 BLE로 Flutter 앱에 전달하고 지도·연결 상태·안전 기능을 통합했습니다.",
+    "role": "GPS–ESP32·BLE, 지도·캐리어 찾기, SOS·설정 UI, 코드 통합·Firebase 배포",
+    "stack": [
+      "ESP32",
+      "BLE",
+      "Flutter / Dart",
+      "Google Maps"
+    ],
+    "repo": "https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/smart-carrier-ble-gps",
+    "result": "GPS·지도·BLE 연동 · 앱 통합",
+    "sections": [
+      [
+        "담당 구현",
+        "GPS–ESP32 UART 연동, BLE 검색·연결·앱 수준 비밀번호 인증, 지도 마커·캐리어 찾기를 구현했습니다. SOS 버튼·보호자·긴급 연락처 설정과 앱 코드 통합, Firebase 배포를 담당했습니다."
+      ],
+      [
+        "통합 오류 해결",
+        "화면 초기화용 좌표와 실제 수신 좌표를 구분하고 데이터 전달 경로를 점검해 마커 미표시·캐리어 찾기 오류를 해결했습니다. BLE 연결 해제 상태와 버튼 전환도 수정했습니다."
+      ],
+      [
+        "팀 분담과 결과",
+        "스마트 알림·Safe Zone은 팀원, 기울기 기반 이동 보조와 소형 시제품은 하드웨어 팀원 담당입니다. 보호자 단말 SOS 알림 수신은 미완료이며 FCM 토큰 문제는 의심 단계로 원인이 확정되지 않았습니다."
+      ]
+    ],
+    "image": "carrier.png",
+    "alt": "캐리어 위치와 캐리어 찾기 버튼을 표시한 실제 앱 화면",
+    "featured": false
+  }
+]

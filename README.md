@@ -2,6 +2,10 @@
 
 RTL / FPGA 설계와 SystemVerilog/UVM 검증을 중심으로 FPGA 기반 시스템 통합 경험을 쌓아왔습니다.
 
+**Website:** [웹 포트폴리오 구성과 게시 설정](./WEBSITE.md)
+
+![이승열 RTL Design & Verification 웹 포트폴리오](./docs/assets/site-preview.jpg)
+
 **Contact:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
 
 ## 01 · RTL / FPGA Design
