@@ -37,7 +37,7 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 
 | 프로젝트 | 담당 역할 | 주요 구현·결과 |
 |---|---|---|
-| [**병렬 결정트리 하드웨어**](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | 3-UN Datapath·FSM 설계, 제1저자 논문 작성·발표 | 논문 순차/병렬 비교 평균 **1.37×**<br>동일 Datapath의 FSM 비교: **37개 벡터 결과 일치 · 293→255 cycles** |
+| [**병렬 결정트리 하드웨어**](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | 3-UN Datapath·FSM 설계, 제1저자 논문 작성·발표 | 논문 순차/병렬 비교 평균 **1.37×**<br>RTL 회귀 **37개 벡터 결과 일치** |
 | [**CNN 모션인식 SoC 플랫폼**](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/zynq-cnn-motion-robot-soc) | PWM IP·C 출력 제어, Record/Replay·DDR/SD 저장, 그리퍼 안정화·Unity | **5축 · 20 ms 제어**, 실물·가상환경 통합 시연<br>7인 팀 최종 프로젝트 **최우수상** |
 | [**MicroBlaze AXI4-Lite Peripheral System**](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system) | Custom IP·Register Map, C MMIO 드라이버, UVM·보드 통합 | **IP 5종**, SPI **32/32**·I2C **30/30 PASS**, 두 보드 통신 |
 | [**FPGA VGA 지휘 게임**](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game) | 좌표 처리·곡 디코더 RTL/TB, 군집화·프레임 동기화, PC UI 연동 | RED/GREEN 중심 좌표 추출, 좌표 갱신 지연 수정, **UART–MAESTRO UI 연동** |
