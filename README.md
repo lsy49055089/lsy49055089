@@ -6,8 +6,8 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 
 병렬 결정트리 연구를 시작으로 AXI4-Lite Custom IP, 영상 좌표 처리, Zynq 출력 제어와 SystemVerilog/UVM 검증으로 경험을 넓혔습니다.
 
+- **Portfolio:** [웹 포트폴리오 바로가기 ↗](https://seungyeol-rtl-portfolio.azuretide33.chatgpt.site)
 - **Email:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
-- **GitHub:** [github.com/lsy49055089](https://github.com/lsy49055089)
 
 ---
 
