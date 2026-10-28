@@ -11,7 +11,14 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 
 ---
 
-## Profile
+
+<a id="profile"></a>
+<a id="tech-stack"></a>
+<a id="projects"></a>
+<a id="04--ai--computer-vision"></a>
+<a id="award"></a>
+
+## 학력·교육
 
 | 기간 | 활동 | 주요 내용 |
 |---|---|---|
@@ -19,7 +26,7 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 | 2020.03 ~ 2026.02 | **국립한국교통대학교 전자공학과** | 학사 · GPA 3.54 / 4.5 |
 | 2025.11.15 | **한국스마트미디어학회 추계학술대회** | 병렬 결정트리 하드웨어 연구 · 제1저자 발표 |
 
-## Tech Stack
+## 기술
 
 | 분야 | 기술 |
 |---|---|
@@ -31,13 +38,13 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 
 ---
 
-## Projects
+## 프로젝트
 
 ### 01 · RTL / FPGA Design
 
 | 프로젝트 | 담당 역할 | 주요 구현·결과 |
 |---|---|---|
-| [**병렬 결정트리 하드웨어**](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | 3-UN Datapath·FSM 설계, 제1저자 논문 작성·발표 | 논문 순차/병렬 비교 평균 **1.37×**<br>RTL 회귀 **37개 벡터 결과 일치** |
+| [**병렬 결정트리 하드웨어**](https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware) | 3-UN Datapath·FSM 설계, 제1저자 논문 작성·발표 | 논문 순차/병렬 비교 평균 **1.37×**<br>RTL 분류·동등성 검사 **37개 벡터 결과 일치** |
 | [**CNN 모션인식 SoC 플랫폼**](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/zynq-cnn-motion-robot-soc) | PWM IP·C 출력 제어, Record/Replay·DDR/SD 저장, 그리퍼 안정화·Unity | **5축 · 20 ms 제어**, 실물·가상환경 통합 시연<br>7인 팀 최종 프로젝트 **최우수상** |
 | [**MicroBlaze AXI4-Lite Peripheral System**](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system) | Custom IP·Register Map, C MMIO 드라이버, UVM·보드 통합 | **IP 5종**, SPI **32/32**·I2C **30/30 PASS**, 두 보드 통신 |
 | [**FPGA VGA 지휘 게임**](https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game) | 좌표 처리·곡 디코더 RTL/TB, 군집화·프레임 동기화, PC UI 연동 | RED/GREEN 중심 좌표 추출, 좌표 갱신 지연 수정, **UART–MAESTRO UI 연동** |
@@ -47,13 +54,13 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 
 ### 02 · Design Verification
 
-| 프로젝트 | 담당 역할 | 검증 내용 |
+| 프로젝트 | 담당 역할 | 주요 구현·결과 |
 |---|---|---|
 | [**SPI · I2C UVM Verification**](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/uvm-spi-i2c-verification) | UVM 환경, Driver·Monitor·Scoreboard·Coverage | SPI·I2C **각각 10,000건 트랜잭션 · 0 FAIL**<br>I2C Functional Coverage **83.33%** |
 | [UART · FIFO · Parity Verification](https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/systemverilog-uart-fifo-verification) | UART/FIFO RTL, Class-based TB·Reference Queue·오류 주입 | FIFO 순서·UART Loopback 비교, Parity 오류 검출·전달 차단 |
 
 <details>
-<summary><strong>SPI·I2C 확장 검증 결과</strong></summary>
+<summary><strong>SPI·I2C 검증 조건과 결과</strong></summary>
 
 <br>
 
@@ -66,28 +73,29 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 
 **실행 환경:** 2026.10.19–20 · VCS W-2024.09-SP2 · UVM 1.2 · seed 1234.
 
-I2C는 한 트랜잭션에서 여러 항목을 검사하므로 트랜잭션 수와 검사 수가 다릅니다. 위 확장 회귀는 AXI4-Lite 프로젝트의 SPI 32/32·I2C 30/30 시험과 별도입니다.
+I2C는 한 트랜잭션에서 여러 항목을 검사하므로 트랜잭션 수와 검사 수가 다릅니다. 위 시험은 AXI4-Lite 프로젝트의 SPI 32/32·I2C 30/30 시험과 별도입니다.
 
 </details>
 
 ### 03 · Embedded Systems
 
-| 프로젝트 | 담당·구현 내용 |
-|---|---|
-| [**BLE·GPS 스마트 캐리어**](https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/smart-carrier-ble-gps) | GPS–ESP32·BLE 통신, Flutter 지도·캐리어 찾기·SOS/설정 UI, 팀 기능 통합·Firebase 배포 |
-| [STM32 Cortex-M4 LED Games](https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/cortex-m4-led-games) | TIM2 반응시간 측정, LCD 기억력 게임, GPIO·I2C·UART 제어 |
+| 프로젝트 | 담당 역할 | 주요 구현·결과 |
+|---|---|---|
+| [BLE·GPS 스마트 캐리어](https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/smart-carrier-ble-gps) | GPS–ESP32·BLE·지도/캐리어 찾기·SOS/설정·앱 통합·Firebase 배포 | 위치·연결 상태 오류 해결, 팀 안전 기능 통합 · 보호자 알림 수신 미완료 |
+| [STM32 Cortex-M4 LED Games](https://github.com/lsy49055089/Embedded-Systems-Projects/tree/main/cortex-m4-led-games) | 타이머·버튼 입력 판정·GPIO·LCD·UART·게임 상태 제어 | 10라운드 반응속도·최대 16단계 기억력 게임 구현 |
 
-### 04 · AI / Computer Vision
+### 04 · AI / CV
 
-| 프로젝트 | 담당·구현 내용 |
-|---|---|
-| [**Multi-Camera Re-ID Tracking**](https://github.com/lsy49055089/AI-Projects/tree/main/AI/multicam-cctv-reid) | OSNet 전처리·추론 인터페이스, MQTT·Camera A/B 초기 구현, Jetson 환경·Tracking 검증 스크립트 |
-| [Jetson AI Rock–Paper–Scissors](https://github.com/lsy49055089/AI-Projects/tree/main/AI/jetson-rps-game) | MobileNetV2·TensorRT 손 영상 분류와 4모드 웹 게임 연동 |
-| [DQN 기반 물류창고 배치 시뮬레이션](https://github.com/lsy49055089/AI-Projects/tree/main/AI/warehouse-dqn) | 개인 프로젝트 · 주문 전처리, 2층 창고 환경·보상 함수, NumPy DQN·배치 시각화 |
+| 프로젝트 | 담당 역할 | 주요 구현·결과 |
+|---|---|---|
+| [Multi-Camera Re-ID Tracking](https://github.com/lsy49055089/AI-Projects/tree/main/AI/multicam-cctv-reid) | OSNet 추론 인터페이스·MQTT/Camera A·B 초기 구현·검증 스크립트 | 카메라 간 동일인 연결·경로 판단, Jetson 실행 환경과 이동 시간 조건 점검 |
+| [Jetson AI Rock–Paper–Scissors](https://github.com/lsy49055089/AI-Projects/tree/main/AI/jetson-rps-game) | TensorRT 손 영상 분류·4모드 웹 게임 연동 | 실시간 입력·승패·UI 연결, 소스·엔진·UI 자산 자동 검사 |
+| [DQN 기반 물류창고 배치 시뮬레이션](https://github.com/lsy49055089/AI-Projects/tree/main/AI/warehouse-dqn) | 개인 프로젝트 · 전처리·창고 환경·보상·DQN·시각화 | 동일 조건 정책 비교, 환경·학습·출력 생성 자동 시험 7개 PASS |
+
 
 ---
 
-## Award
+## 수상
 
 <details>
 <summary><strong>2026.10.15 · 최종 프로젝트 경진대회 최우수상</strong></summary>
