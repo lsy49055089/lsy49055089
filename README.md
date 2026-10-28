@@ -1,16 +1,23 @@
-# 이승열
+<a id="이승열"></a>
 
-**RTL / FPGA Design & Design Verification**
+<table>
+<tr>
+<td width="76%" valign="middle">
 
-RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔습니다. 연산 결과뿐 아니라 **데이터가 갱신되고 전달되는 시점**을 함께 살피며 문제의 원인을 좁힙니다.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/header-dark.svg">
+  <img src="./assets/readme/header-light.svg" width="100%" alt="이승열 · RTL / FPGA Design &amp; Verification">
+</picture>
 
-병렬 결정트리 연구를 시작으로 AXI4-Lite Custom IP, 영상 좌표 처리, Zynq 출력 제어와 SystemVerilog/UVM 검증으로 경험을 넓혔습니다.
-
-- **Portfolio:** [웹 포트폴리오 바로가기 ↗](https://seungyeol-rtl-portfolio.azuretide33.chatgpt.site)
-- **Email:** [tmdduf1101@naver.com](mailto:tmdduf1101@naver.com)
-
----
-
+<p>RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔습니다.<br>연산 결과와 <strong>데이터가 갱신·전달되는 시점</strong>을 함께 살피며 원인을 좁힙니다.</p>
+<p>병렬 결정트리 연구, AXI4-Lite IP, 영상 좌표 처리, Zynq 출력 제어와 SystemVerilog/UVM 검증을 수행했습니다.</p>
+<p><a href="https://seungyeol-rtl-portfolio.azuretide33.chatgpt.site"><strong>웹 포트폴리오 ↗</strong></a> &nbsp;·&nbsp; <a href="mailto:tmdduf1101@naver.com">이메일</a></p>
+</td>
+<td width="24%" valign="middle" align="center">
+<img src="./docs/assets/portrait.webp" width="180" alt="이승열 프로필 사진">
+</td>
+</tr>
+</table>
 
 <a id="profile"></a>
 <a id="tech-stack"></a>
@@ -18,13 +25,44 @@ RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔
 <a id="04--ai--computer-vision"></a>
 <a id="award"></a>
 
-## 학력·교육
+[대표 프로젝트](#대표-프로젝트) · [기술](#기술) · [전체 프로젝트](#프로젝트) · [학력·교육](#학력교육) · [수상](#수상)
 
-| 기간 | 활동 | 주요 내용 |
-|---|---|---|
-| 2026.03 ~ 2026.10 | **서울기술교육센터** | 온디바이스 AI 시스템반도체 설계 2기 |
-| 2020.03 ~ 2026.02 | **국립한국교통대학교 전자공학과** | 학사 · GPA 3.54 / 4.5 |
-| 2025.11.15 | **한국스마트미디어학회 추계학술대회** | 병렬 결정트리 하드웨어 연구 · 제1저자 발표 |
+## 대표 프로젝트
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<sub>영상 좌표 처리</sub>
+<h3>FPGA VGA 지휘 게임</h3>
+<p>RED/GREEN 중심 좌표 RTL, 프레임 동기화와 UART–PC UI 연동</p>
+<p><strong>13개 프레임 · 오류 0건</strong><br><sub>320×240 좌표 RTL 시뮬레이션</sub></p>
+<a href="https://github.com/lsy49055089/RTL-Design-Projects/tree/main/fpga-vga-conductor-game"><strong>설계·검증 내용 보기 ↗</strong></a>
+</td>
+<td width="50%" valign="top">
+<sub>AXI4-Lite Custom IP</sub>
+<h3>MicroBlaze Peripheral System</h3>
+<p>IP 5종, Register Map·C MMIO 드라이버와 두 보드 통신 통합</p>
+<p><strong>SPI 32/32 · I2C 30/30 PASS</strong><br><sub>AXI 프로젝트의 UVM 시험</sub></p>
+<a href="https://github.com/lsy49055089/RTL-Design-Projects/tree/main/microblaze-axi4-lite-peripheral-system"><strong>설계·검증 내용 보기 ↗</strong></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<sub>병렬 탐색 하드웨어 연구</sub>
+<h3>병렬 결정트리 하드웨어</h3>
+<p>현재 노드·좌우 자식의 3-UN 병렬 Datapath와 탐색 제어 FSM 설계</p>
+<p><strong>평균 1.37× 처리 성능</strong><br><sub>논문 실험의 순차·병렬 구조 비교</sub></p>
+<a href="https://github.com/lsy49055089/Parallel-Decision-Tree-Hardware"><strong>논문·RTL 내용 보기 ↗</strong></a>
+</td>
+<td width="50%" valign="top">
+<sub>프로토콜 자동 검증</sub>
+<h3>SPI · I2C UVM Verification</h3>
+<p>RTL·UVM 환경 구성, Scoreboard 비교와 Functional Coverage 확인</p>
+<p><strong>각각 10,000건 · 0 FAIL</strong><br><sub>I2C Functional Coverage 83.33%</sub></p>
+<a href="https://github.com/lsy49055089/RTL-Verification-Projects/tree/main/uvm-spi-i2c-verification"><strong>검증 환경·결과 보기 ↗</strong></a>
+</td>
+</tr>
+</table>
 
 ## 기술
 
@@ -94,6 +132,14 @@ I2C는 한 트랜잭션에서 여러 항목을 검사하므로 트랜잭션 수�
 
 
 ---
+
+## 학력·교육
+
+| 기간 | 활동 | 주요 내용 |
+|---|---|---|
+| 2026.03 ~ 2026.10 | **서울기술교육센터** | 온디바이스 AI 시스템반도체 설계 2기 |
+| 2020.03 ~ 2026.02 | **국립한국교통대학교 전자공학과** | 학사 · GPA 3.54 / 4.5 |
+| 2025.11.15 | **한국스마트미디어학회 추계학술대회** | 병렬 결정트리 하드웨어 연구 · 제1저자 발표 |
 
 ## 수상
 

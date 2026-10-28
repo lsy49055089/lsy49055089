@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="166" viewBox="0 0 720 166" role="img" aria-labelledby="title desc">
+<title id="title">SEUNGYEOL LEE</title>
+<desc id="desc">Datapath · Interfaces · Verification · System Integration</desc>
+<rect x="0.5" y="0.5" width="719" height="165" rx="12" fill="#0d1117" stroke="#30363d"/>
+<rect x="28" y="30" width="4" height="106" rx="2" fill="#77aaf3"/>
+<g font-family="sans-serif">
+<text x="52" y="45" fill="#77aaf3" font-size="12" font-weight="700" letter-spacing="2">RTL / FPGA DESIGN &amp; VERIFICATION</text>
+<text x="50" y="93" fill="#f0f6fc" font-size="38" font-weight="700" letter-spacing="-1">SEUNGYEOL LEE</text>
+<text x="52" y="128" fill="#9caabd" font-size="18">Datapath · Interfaces · Verification · System Integration</text>
+</g></svg>
