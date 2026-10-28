@@ -1,9 +1,5 @@
 <a id="이승열"></a>
 
-<table>
-<tr>
-<td width="76%" valign="middle">
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/header-dark.svg">
   <img src="./assets/readme/header-light.svg" width="100%" alt="이승열 · RTL / FPGA Design &amp; Verification">
@@ -12,12 +8,6 @@
 <p>RTL을 설계하고 테스트벤치와 FPGA 보드에서 동작을 확인해 왔습니다.<br>연산 결과와 <strong>데이터가 갱신·전달되는 시점</strong>을 함께 살피며 원인을 좁힙니다.</p>
 <p>병렬 결정트리 연구, AXI4-Lite IP, 영상 좌표 처리, Zynq 출력 제어와 SystemVerilog/UVM 검증을 수행했습니다.</p>
 <p><a href="https://seungyeol-rtl-portfolio.azuretide33.chatgpt.site"><strong>웹 포트폴리오 ↗</strong></a> &nbsp;·&nbsp; <a href="mailto:tmdduf1101@naver.com">이메일</a></p>
-</td>
-<td width="24%" valign="middle" align="center">
-<img src="./docs/assets/portrait.webp" width="180" alt="이승열 프로필 사진">
-</td>
-</tr>
-</table>
 
 <a id="profile"></a>
 <a id="tech-stack"></a>
